@@ -1,0 +1,42 @@
+<button id="panicButton">🚨 Panic Button</button>
+
+<script>
+    document.getElementById("panicButton").addEventListener("click", function () {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    let latitude = position.coords.latitude;
+                    let longitude = position.coords.longitude;
+                    let googleMapsLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+
+                    fetch("http://127.0.0.1:5000/send_email", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            email: "janvisingh.gahrwal@gmail.com",
+                            subject: "🚨 Emergency Alert!",
+                            message: `This is an emergency! Please respond immediately.\n\nLocation: ${googleMapsLink}`
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert(data.message); // Show success or error message
+                    })
+                    .catch(error => {
+                        console.error("❌ Error sending email:", error);
+                        alert("❌ Failed to send email.");
+                    });
+                },
+                function (error) {
+                    console.error("❌ Geolocation error:", error.message);
+                    alert("❌ Failed to get location.");
+                }
+            );
+        } else {
+            console.error("❌ Geolocation is not supported.");
+            alert("❌ Geolocation is not supported by this browser.");
+        }
+    });
+</script>

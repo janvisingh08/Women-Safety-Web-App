@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Police Stations</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="police.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Find Nearby Police Stations</h1>
+        <button onclick="findPoliceStations()">Locate Police Stations</button>
+        <div id="map"></div>
+        <p id="status"></p>
+    </div>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places"></script>
+</body>
+</html>
