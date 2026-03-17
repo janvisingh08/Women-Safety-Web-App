@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Astitva - the fight for existence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="position: relative; width: 300px; height: 300px; margin: 50px auto;">
+  <!-- Circular Shloka SVG -->
+  <svg viewBox="0 0 300 300" width="300" height="300" style="position: absolute; top: 0; left: 0;">
+    <defs>
+      <path id="circlePath" d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0" />
+    </defs>
+    <text font-size="18" fill="#FFFFFF" text-anchor="middle">
+      <textPath href="#circlePath" startOffset="25%">
+        यत्र नार्यस्तु पूज्यन्ते, रमन्ते तत्र देवताः
+      </textPath>
+    </text>
+  </svg>
+
+  <!-- Centered Logo Image -->
+  <img src="logo.webp" alt="Logo"
+       style="width: 200px; height: 200px; border-radius: 50%;
+              position: absolute; top: 50%; left: 50%;
+              transform: translate(-50%, -50%);">
+</div>
+
+
+            <div class="title-container">
+                <h1 class="site-title">Astitva</h1>
+                <p class="subtitle">the fight for existence</p>
+            </div>
+        </div>
+    </header>
+    
+   <div class="card-container">
+  <!-- Emergency Contacts -->
+  <div class="card">
+    <img src="images/emergency.jpg" alt="Emergency Contacts">
+    <div class="card-content">
+      <h3>Emergency Contacts</h3>
+      <p>Quick access to your emergency contact list.</p>
+      <a href="emails.html" class="read-more">View Contacts</a>
+    </div>
+  </div>
+
+  <!-- Legal Rights -->
+  <div class="card">
+    <img src="images/legal-rights.jpg" alt="Legal Rights">
+    <div class="card-content">
+      <h3>Legal Rights</h3>
+      <p>Know your legal rights to stay empowered.</p>
+      <a href="legal_rights.html" class="read-more">Know Your Rights</a>
+    </div>
+  </div>
+
+  <!-- Self Defense -->
+  <div class="card">
+    <img src="images/self-defense.jpg" alt="Self Defense Tips">
+    <div class="card-content">
+      <h3>Self Defense Tips</h3>
+      <p>Learn techniques to protect yourself effectively.</p>
+      <a href="self_defense.html" class="read-more">Learn Tips</a>
+    </div>
+  </div>
+
+  <!-- Panic Button -->
+  <div class="card">
+    <img src="images/panic.jpg" alt="Panic Button">
+    <div class="card-content">
+      <h3>Panic Button</h3>
+      <p>Send your live location to emergency contacts instantly.</p>
+      <a href="panic.html" id="panicButton" class="read-more" style="background-color: red;">Activate Now</a>
+    
+    </div>
+  </div>
+
+  <!-- Police Station -->
+  <div class="card">
+    <img src="images/police.jpg" alt="Police Station">
+    <div class="card-content">
+      <h3>Police Station Near Me</h3>
+      <p>Find the nearest police station based on your location.</p>
+      <a href="javascript:void(0);" class="read-more" onclick="findPoliceStation()">Search</a>
+      <input type="text" id="location" placeholder="Enter your location" style="margin-top: 10px;">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="hero">Your safety, our priority</div>
+    <div class="footer">&copy; 2025 Astitva| Women's Safety Web App</div>
+    <script src="script.js" defer></script>
+</body>
+</html>
